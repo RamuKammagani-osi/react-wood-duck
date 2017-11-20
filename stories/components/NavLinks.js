@@ -87,7 +87,9 @@ const navLinksWithInnerNav = [
 storiesOf('Sub Components-beta/NavLinks', module)
   .add(
     'Simple Navigation links',
-    withInfo(`
+    withInfo({
+      inline: false,
+      text: `
         #### Usage
         - Used to render a group of navigation links
 
@@ -101,7 +103,8 @@ storiesOf('Sub Components-beta/NavLinks', module)
                 </code></pre>
         * * *
         ${basicNavLinksUsage}
-     `)(() => (
+     `,
+    })(() => (
       <div className="container col-md-3" role="navigation">
         <NavLinks
           navLinks={simpleNavLinks}
@@ -114,7 +117,9 @@ storiesOf('Sub Components-beta/NavLinks', module)
   )
   .add(
     'Nested navigation links ',
-    withInfo(`
+    withInfo({
+      inline: false,
+      text: `
        #### Usage
          - Provide *navLinks* property with navigation links details to render
 
@@ -136,7 +141,8 @@ storiesOf('Sub Components-beta/NavLinks', module)
 
        * * *
        ${basicNavLinksUsage}
-       `)(() => (
+       `,
+    })(() => (
       <div className="container col-md-3" role="navigation">
         <NavLinks
           navLinks={navLinksWithInnerNav}

@@ -48,8 +48,9 @@ const codeStyle = 'color:powderblue';
 
 storiesOf('Sub Components-beta/NavLinksContainer', module).add(
   'NavigationLinksContianer',
-  withInfo(
-    `
+  withInfo({
+    inline: false,
+    text: `
     #### Usage
     - Use this component when there is a need to render a group of navigation links with active navlink highlighter
 
@@ -93,8 +94,8 @@ storiesOf('Sub Components-beta/NavLinksContainer', module).add(
 
     #### Accessibility
     - Surround NavLinksContainer component with <div role="navigation"> or <nav>.
- `
-  )(() => (
+ `,
+  })(() => (
     <div className="container col-md-3">
       <NavLinksContainer navLinks={navLinksWithInnerNav} />
     </div>

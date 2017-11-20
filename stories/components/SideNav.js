@@ -56,8 +56,9 @@ const navLinks = [
 ];
 
 const CenterDecorator = story => <div>{story()}</div>;
-const SideNavStory = withInfo(
-  `
+const SideNavStory = withInfo({
+  inline: false,
+  text: `
     #### Usage
     - A side navigation component renders different types of content based on the *content* property value. For now it can just render a group of navigation links.
 
@@ -127,8 +128,8 @@ const SideNavStory = withInfo(
                     }
                 ]
 
- `
-)(() => (
+ `,
+})(() => (
   <div>
     <div className="row">
       <SideNav content={navLinks} columnWidth={3} />
